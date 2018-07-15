@@ -16,15 +16,10 @@
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :avatar_id %>
-    <%= form.text_field :avatar_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image_id %>
-    <%= form.text_field :image_id %>
-  </div>
+        
+  <%= form.file_field :images, multiple: true %>
+<br />
+<br />
 
   <div class="actions">
     <%= form.submit %>

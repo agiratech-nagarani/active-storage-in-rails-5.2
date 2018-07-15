@@ -1,4 +1,5 @@
 class Article < ApplicationRecord
-  belongs_to :avatar
-  belongs_to :image
+  has_many_attached :images
+  # has_one_attached :image
+
 end
