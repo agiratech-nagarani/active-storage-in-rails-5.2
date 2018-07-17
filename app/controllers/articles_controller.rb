@@ -62,6 +62,12 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def delete_image
+    @image = ActiveStorage::Attachment.find(params[:id])
+    @image.purge
+    redirect_to articles_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article

@@ -6,7 +6,9 @@
 </p>
 
 <% @article.images.each do |image| %>
-<%= image_tag image.variant(resize: "100x100") %>
+	<%= image_tag image.variant(resize: "100x100") %>
+  <%= link_to 'Download', image, download: image %>
+  <%= link_to 'Remove', delete_image_article_path(image), method: :delete, data: { confirm: 'Are you sure?' }%>
 <% end %>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
